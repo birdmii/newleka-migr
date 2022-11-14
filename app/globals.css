@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  font-display: optional;
+  src: local('Noto Sans KR Regular'),
+    url(/fonts/NotoSans-Regular.woff2) format('woff2'),
+    url(/fonts/NotoSans-Regular.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 500;
+  font-display: optional;
+  src: local('Noto Sans KR Medium'),
+    url(/fonts/NotoSans-Medium.woff2) format('woff2'),
+    url(/fonts/NotoSans-Medium.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 700;
+  font-display: optional;
+  src: local('Noto Sans KR Bold'),
+    url(/fonts/NotoSans-Bold.woff2) format('woff2'),
+    url(/fonts/NotoSans-Bold.woff) format('woff');
+}
