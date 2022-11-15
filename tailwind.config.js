@@ -58,6 +58,11 @@ module.exports = {
       fontFamily: {
         sans: ["Noto Sans KR", defaultTheme.fontFamily.sans],
       },
+      boxShadow: {
+        'shadow-1': '0px 6px 12px -6px rgba(24, 39, 75, 0.12), 0px 8px 24px -4px rgba(24, 39, 75, 0.08)',
+        'shadow-2': '0px 16px 20px rgba(229, 229, 229, 0.2)'
+        
+      }
     },
   },
   plugins: [],

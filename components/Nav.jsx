@@ -7,7 +7,7 @@ import NavBtn from "@components/NavBtn";
 const Nav = () => {
   return (
     <>
-      <div className="bg-white h-[64px] sticky top-0 w-full z-10">
+      <div className="bg-white h-[64px] sticky top-0 w-full z-10 shadow-shadow-2">
         <div className="max-md:justify-between relative max-w-[1232px] my-0 mx-auto py-0 px-5 flex items-center h-full">
           <div className="md:hidden">
             <svg
@@ -27,7 +27,7 @@ const Nav = () => {
           </div>
           <div className="md:w-[20%]">
             <Link href="/">
-              <Image alt="Logo Image" src={Logo} width={127} height={83} />
+              <Image alt="Logo Image" src={Logo} width={127} height={83} priority />
             </Link>
           </div>
           <div className="md:hidden">
