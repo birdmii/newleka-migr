@@ -1,14 +1,30 @@
 import Card from "./Card";
 
-const Cards = ({category, newsletters}) => {
+const Cards = ({ category, newsletters }) => {
   const count = newsletters ? newsletters.length : 0;
-  console.log(count);
+  const categoryArr = [
+    { code: "all", title: "랜덤모두보기" },
+    { code: "economy", title: "경제" },
+    { code: "education", title: "교육" },
+    { code: "news", title: "뉴스" },
+    { code: "design", title: "디자인" },
+    { code: "lifestyle", title: "라이프스타일" },
+    { code: "marketing", title: "마케팅" },
+    { code: "culture", title: "문화" },
+    { code: "work", title: "일과 노동" },
+    { code: "tech", title: "테크" },
+    { code: "trend", title: "트렌드" },
+    { code: "society", title: "사회" },
+  ];
+
   return (
     <>
       <h3 className="font-2xl text-gray-600 text-[27px] font-bold pt-8">
-        {category}
+        {categoryArr.find((item) => item.code === category).title}
         {"  "}
-        {category !== "랜덤모두보기" ? <span className="text-[17px]">({count})</span> : null}
+        {category !== "all" ? (
+          <span className="text-[17px]">({count})</span>
+        ) : null}
       </h3>
       {count > 0 ? (
         <div className="mt-4 grid grid-cols-[repeat(3,300px)]	gap-[18px] mb-[18px]">

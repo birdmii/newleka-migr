@@ -52,7 +52,7 @@ const Card = ({ newsletter }) => {
   let categoryClassName = `bg-${newsletter.category}`;
 
   return (
-    <div className="relative min-w-[300px] h-[584px] bg-white p-5 rounded-2xl overflow-hidden">
+    <div className="relative min-w-[300px] h-[584px] bg-white p-5 rounded-2xl overflow-hidden shadow-shadow-1 hover:shadow-none">
       <div className="flex mb-2">
         <span
           className={
@@ -95,7 +95,7 @@ const Card = ({ newsletter }) => {
                   return (
                     <span
                       key={day.code}
-                      className="py-1 px-2 mr-1 text-xs text-medium rounded-lg bg-primary-100 text-primary-500"
+                      className="py-1 px-2 mr-1 text-xs font-medium rounded-lg bg-primary-100 text-primary-500"
                     >
                       {day.name}
                     </span>

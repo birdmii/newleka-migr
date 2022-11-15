@@ -1,3 +1,4 @@
+import Alert from "@components/Alert";
 import Cards from "@components/Cards";
 
 export default function Home() {
@@ -70,11 +71,14 @@ export default function Home() {
     },
   ];
   return (
-    <>
-      <Cards
-        category={"랜덤모두보기"}
-        newsletters={newsletters}
+    <div className="mt-10">
+      <Alert
+        alertContent={{
+          content:
+            "210개가 넘는 뉴스레터를 NEW・LE・KA에 모아두었어요📚 새로운 뉴스레터들을 찾아보세요!",
+        }}
       />
-    </>
+      <Cards category={"all"} newsletters={newsletters} />
+    </div>
   );
 }
