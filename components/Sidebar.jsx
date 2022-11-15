@@ -1,11 +1,11 @@
 'use client';
 
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname } from 'next/navigation';
 
 const Sidebar = () => {
-  const router = useRouter();
-  const category = undefined;
+  const paths = usePathname();
+  const category = paths.split('/')[2];
 
   const categories = [
     { code: "economy", title: "경제" },
@@ -27,7 +27,7 @@ const Sidebar = () => {
         카테고리
       </div>
 
-      <ul className="text-[15px] font-medium">
+      <ul className="text-[15px] font-medium my-4">
         <Link href="/">
           {category === undefined ? (
             <li className="py-[9px] px-4 mt-[3px] text-gray-600 font-bold w-full cursor-pointer rounded-lg hover:rounded-lg bg-gray-100">
