@@ -7,6 +7,19 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
+  safelist: [
+    "bg-economy",
+    "bg-education",
+    "bg-news",
+    "bg-design",
+    "bg-lifestyle",
+    "bg-marketing",
+    "bg-culture",
+    "bg-work",
+    "bg-society",
+    "bg-tech",
+    "bg-trend",
+  ],
   theme: {
     colors: {
       white: "#fff",
