@@ -1,3 +1,4 @@
+import Footer from "@components/Footer";
 import Nav from "@components/Nav";
 import Sidebar from "@components/Sidebar";
 import "./globals.css";
@@ -12,6 +13,7 @@ export default function RootLayout({ children }) {
           <Sidebar />
           <div className="w-full min-h-full">{children}</div>
         </div>
+        <Footer />
       </body>
     </html>
   );
