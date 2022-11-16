@@ -4,17 +4,17 @@ import Btn from "@components/Btn";
 
 const Footer = () => {
   return (
-    <div className="text-center bg-gray-100 py-[30px] px-20 mt-[120px] static bottom-0 w-full">
-      <div className="grid grid-cols-[repeat(2,1fr)]">
-        <div className="text-right pr-10">
+    <div className="text-center bg-gray-100 py-[30px] md:px-20 px-8 mt-[120px] static bottom-0 w-full">
+      <div className="md:grid md:grid-cols-[repeat(2,1fr)]">
+        <div className="text-right md:pr-10">
           <Image
             alt="NEW・LE・KA Footer"
             src={BroSis}
-            className="w-full max-w-[430px] h-auto mr-0 ml-auto"
+            className="w-full md:max-w-[430px] h-auto mx-auto"
           />
         </div>
-        <div className="py-10 px-0 flex flex-col text-left justify-around">
-          <p className="text-3xl font-bold leading-snug">
+        <div className="py-10 px-0 flex flex-col md:text-left justify-around">
+          <p className="text-xl lg:text-2xl xl:text-3xl font-bold leading-snug">
             개발자 누나와 디자이너 동생이 한팀인 <br />
             LIFEGUARD STUDIO 입니다.
             <br />

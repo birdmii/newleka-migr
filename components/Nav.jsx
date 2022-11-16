@@ -8,8 +8,8 @@ const Nav = () => {
   return (
     <>
       <div className="bg-white h-[64px] sticky top-0 w-full z-10 shadow-shadow-2">
-        <div className="max-md:justify-between relative max-w-[1232px] my-0 mx-auto py-0 px-5 flex items-center h-full">
-          <div className="md:hidden">
+        <div className="max-lg:justify-between relative max-w-[1232px] my-0 mx-auto py-0 px-5 flex items-center h-full">
+          <div className="lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -25,12 +25,12 @@ const Nav = () => {
               />
             </svg>
           </div>
-          <div className="md:w-[20%]">
+          <div className="lg:w-[20%]">
             <Link href="/">
               <Image alt="Logo Image" src={Logo} width={127} height={83} priority />
             </Link>
           </div>
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -46,10 +46,10 @@ const Nav = () => {
               />
             </svg>
           </div>
-          <div className="max-md:hidden flex items-center h-full text-gray-300 border-l border-l-gray-100 border-r border-r-gray-100 w-[60%] pl-5">
+          <div className="max-lg:hidden flex items-center h-full text-gray-300 border-l border-l-gray-100 border-r border-r-gray-100 w-[60%] pl-5">
             <Search />
           </div>
-          <div className="max-md:hidden ml-auto">
+          <div className="max-lg:hidden ml-auto">
             <NavBtn content={"제안하기"} />
           </div>
         </div>
