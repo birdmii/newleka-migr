@@ -4,6 +4,7 @@ import NoCard from "./NoCard";
 const Cards = ({ category, newsletters }) => {
   const count = newsletters ? newsletters.length : 0;
   const categoryArr = [
+    { code: "search", title: "검색 결과" },
     { code: "all", title: "랜덤모두보기" },
     { code: "economy", title: "경제" },
     { code: "education", title: "교육" },
