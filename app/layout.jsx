@@ -11,9 +11,10 @@ export default function RootLayout({ children }) {
         <Nav />
         <div className="relative max-w-[1232px] my-0 mx-auto py-0 px-5 flex justify-center h-full">
           <Sidebar />
-          <div className="w-full min-h-full">{children}</div>
+          <div className="w-full min-h-screen">{children}</div>
         </div>
         <Footer />
+        <div id="modal-root"></div>
       </body>
     </html>
   );
