@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
 import Link from "next/link";
-import { usePathname } from 'next/navigation';
+import { usePathname } from "next/navigation";
 
 const Sidebar = () => {
   const paths = usePathname();
-  const category = paths.split('/')[2];
+  const category = paths.split("/")[2];
 
   const categories = [
     { code: "economy", title: "경제" },
@@ -22,51 +22,61 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className="mt-10 sticky t-[104px] min-w-[230px] mr-5">
-      <div className="text-[17px] font-bold justify-between py-[11px] pr-0 pl-[11px]">
-        카테고리
-      </div>
+    <div>
+      <div className="max-lg:hidden mt-10 sticky top-[104px] w-[230px] mr-5">
+        <div className="text-[17px] font-bold justify-between py-[11px] pr-0 pl-[11px]">
+          카테고리
+        </div>
 
-      <ul className="text-[15px] font-medium my-4">
-        <Link href="/">
-          {category === undefined ? (
-            <li className="py-[9px] px-4 mt-[3px] text-gray-600 font-bold w-full cursor-pointer rounded-lg hover:rounded-lg bg-gray-100">
-              {" "}
-              랜덤모두보기
-            </li>
-          ) : (
-            <li className="py-[9px] px-4 mt-[3px] text-gray-400 w-full cursor-pointer hover:bg-gray-100 hover:rounded-lg">
-              {" "}
-              랜덤모두보기
-            </li>
-          )}
-        </Link>
-        {categories.map((item) => {
-          if (item.code === category) {
-            return (
-              <Link key={item.code} href="/category/[category]" as={`/category/${item.code}`}>
-                <li
-                  className="py-[9px] px-4 mt-[3px] text-gray-600 font-bold w-full cursor-pointer rounded-lg hover:rounded-lg bg-gray-100"
-                  id={item.code}
+        <ul className="text-[15px] font-medium my-4">
+          <Link href="/">
+            {category === undefined ? (
+              <li className="py-[9px] px-4 mt-[3px] text-gray-600 font-bold w-full cursor-pointer rounded-lg hover:rounded-lg bg-gray-100">
+                {" "}
+                랜덤모두보기
+              </li>
+            ) : (
+              <li className="py-[9px] px-4 mt-[3px] text-gray-400 w-full cursor-pointer hover:bg-gray-100 hover:rounded-lg">
+                {" "}
+                랜덤모두보기
+              </li>
+            )}
+          </Link>
+          {categories.map((item) => {
+            if (item.code === category) {
+              return (
+                <Link
+                  key={item.code}
+                  href="/category/[category]"
+                  as={`/category/${item.code}`}
                 >
-                  {item.title}
-                </li>
-              </Link>
-            );
-          } else {
-            return (
-              <Link key={item.code} href="/category/[category]" as={`/category/${item.code}`}>
-                <li
-                  className="py-[9px] px-4 mt-[3px] text-gray-400 w-full cursor-pointer hover:bg-gray-100 hover:rounded-lg"
-                  id={item.code}
+                  <li
+                    className="py-[9px] px-4 mt-[3px] text-gray-600 font-bold w-full cursor-pointer rounded-lg hover:rounded-lg bg-gray-100"
+                    id={item.code}
+                  >
+                    {item.title}
+                  </li>
+                </Link>
+              );
+            } else {
+              return (
+                <Link
+                  key={item.code}
+                  href="/category/[category]"
+                  as={`/category/${item.code}`}
                 >
-                  {item.title}
-                </li>
-              </Link>
-            );
-          }
-        })}
-      </ul>
+                  <li
+                    className="py-[9px] px-4 mt-[3px] text-gray-400 w-full cursor-pointer hover:bg-gray-100 hover:rounded-lg"
+                    id={item.code}
+                  >
+                    {item.title}
+                  </li>
+                </Link>
+              );
+            }
+          })}
+        </ul>
+      </div>
     </div>
   );
 };
