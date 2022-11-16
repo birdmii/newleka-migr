@@ -4,7 +4,7 @@ import Btn from "./Btn"
 
 const NoCard = () => {
   return (
-    <div className="flex justify-center items-center min-w-[936px] flex-col">
+    <div className="flex justify-center items-center max-lg:min-w-[90vw] flex-col">
       <Image src={NoResult} className="max-w-[387px] h-auto" />
       <div className="text-center mt-6">
         <h3 className="text-gray-600 font-bold text-2xl leading-loose">등록된 뉴스레터가 없어요 ㅠㅠ</h3>

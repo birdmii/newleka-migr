@@ -67,7 +67,7 @@ const Card = ({ newsletter }) => {
         {newsletter.title}
       </h2>
 
-      <p className="text-left break-keep text-gray-500 font-xs my-[14px] leading-relaxed">
+      <p className="text-left break-keep text-gray-500 text-sm my-[14px] leading-relaxed">
         {newsletter.description}
       </p>
 
