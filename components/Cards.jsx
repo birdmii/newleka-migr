@@ -1,4 +1,5 @@
 import Card from "./Card";
+import NoCard from "./NoCard";
 
 const Cards = ({ category, newsletters }) => {
   const count = newsletters ? newsletters.length : 0;
@@ -27,13 +28,15 @@ const Cards = ({ category, newsletters }) => {
         ) : null}
       </h3>
       {count > 0 ? (
-        <div className="mt-4 grid grid-cols-[repeat(3,300px)]	gap-[18px] mb-[18px]">
+        <div className="mt-4 grid sm:grid-cols-[repeat(1,1fr)] md:grid-cols-[repeat(2,2fr)] xl:grid-cols-[repeat(3,300px)] gap-[18px] mb-[18px]">
           {newsletters.map((newsletter) => (
             <Card key={newsletters.id} newsletter={newsletter} />
           ))}
         </div>
       ) : (
-        <div className="mt-4 mb-30"></div>
+        <div className="mt-4 mb-30">
+          <NoCard />
+        </div>
       )}
     </>
   );
