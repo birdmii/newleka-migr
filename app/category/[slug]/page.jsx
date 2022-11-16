@@ -1,8 +1,20 @@
+import { supabase } from "@utils/database";
 import Cards from "@components/Cards";
 import { notFound } from "next/navigation";
 
-export default function Page({ params, searchParams }) {
-  console.log(searchParams.id);
+export default async function Page({ params, searchParams }) {
+  const { data } = await supabase.from("newsletters").select("*").eq('category',`${params.slug}`);
+  
+  let m = data.length;
+  let t;
+  let i;
+  while (m) {
+    i = Math.floor(Math.random() * m--);
+    t = data[m];
+    data[m] = data[i];
+    data[i] = t;
+  };
+
   const categoryArr = [
     "economy",
     "education",
@@ -22,7 +34,7 @@ export default function Page({ params, searchParams }) {
 
   return (
     <>
-      <Cards category={params.slug} />
+      <Cards category={params.slug} newsletters={data} />
     </>
   );
 }

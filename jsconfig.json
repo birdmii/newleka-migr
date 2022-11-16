@@ -8,6 +8,9 @@
       "@assets/*": [
         "public/assets/*"
       ],
+      "@utils/*": [
+        "utils/*"
+      ]
     }
   }
 }
