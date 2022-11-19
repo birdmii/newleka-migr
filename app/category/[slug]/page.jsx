@@ -3,17 +3,10 @@ import Cards from "@components/Cards";
 import { notFound } from "next/navigation";
 
 export default async function Page({ params, searchParams }) {
-  const { data } = await supabase.from("newsletters").select("*").eq('category',`${params.slug}`);
-  
-  let m = data.length;
-  let t;
-  let i;
-  while (m) {
-    i = Math.floor(Math.random() * m--);
-    t = data[m];
-    data[m] = data[i];
-    data[i] = t;
-  };
+  const { data } = await supabase
+    .from("newsletters")
+    .select("*")
+    .eq("category", `${params.slug}`);
 
   const categoryArr = [
     "economy",
