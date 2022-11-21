@@ -1,4 +1,4 @@
-const Search = () => {
+const Search = ({query, handleQuery, handleQuerySubmit}) => {
   return (
     <>
       <svg
@@ -16,11 +16,13 @@ const Search = () => {
         />
       </svg>
 
-      <form className="w-full h-full">
+      <form className="w-full h-full" onSubmit={handleQuerySubmit}>
         <input
           type="text"
           name="search"
           id="searchBox"
+          value={query}
+          onChange={handleQuery}
           className="w-full h-full pl-5 text-gray-400 text-sm focus:text-gray-600 placeholder:text-gray-300 outline-none"
           placeholder="관심있는 주제를 검색해보세요. (예: 음악, 스타트업, 마케팅 등)"
         />

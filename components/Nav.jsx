@@ -4,7 +4,7 @@ import Logo from "@assets/logo.png";
 import Search from "@components/Search";
 import NavBtn from "@components/NavBtn";
 
-const Nav = () => {
+const Nav = ({ query, handleQuery, handleQuerySubmit }) => {
   return (
     <>
       <div className="bg-white h-[64px] sticky top-0 w-full z-10 shadow-shadow-2">
@@ -27,7 +27,13 @@ const Nav = () => {
           </div>
           <div className="lg:w-[20%]">
             <Link href="/">
-              <Image alt="Logo Image" src={Logo} width={127} height={83} priority />
+              <Image
+                alt="Logo Image"
+                src={Logo}
+                width={127}
+                height={83}
+                priority
+              />
             </Link>
           </div>
           <div className="lg:hidden">
@@ -47,7 +53,11 @@ const Nav = () => {
             </svg>
           </div>
           <div className="max-lg:hidden flex items-center h-full text-gray-300 border-l border-l-gray-100 border-r border-r-gray-100 w-[60%] pl-5">
-            <Search />
+            <Search
+              query={query}
+              handleQuery={handleQuery}
+              handleQuerySubmit={handleQuerySubmit}
+            />
           </div>
           <div className="max-lg:hidden ml-auto">
             <NavBtn content={"제안하기"} />

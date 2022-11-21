@@ -6,7 +6,10 @@ import NavBtn from "./NavBtn";
 
 const Sidebar = () => {
   const paths = usePathname();
-  const category = paths.split("/")[2];
+  let category = null;
+  if(paths != '/search') {
+    category = paths.split("/")[2];
+  }
 
   const categories = [
     { code: "economy", title: "경제" },
