@@ -4,12 +4,12 @@ import Logo from "@assets/logo.png";
 import Search from "@components/Search";
 import NavBtn from "@components/NavBtn";
 
-const Nav = ({ query, handleQuery, handleQuerySubmit }) => {
+const Nav = ({ query, handleQuery, handleQuerySubmit, handleShowSidebar }) => {
   return (
     <>
       <div className="bg-white h-[64px] sticky top-0 w-full z-10 shadow-shadow-2">
         <div className="max-lg:justify-between relative max-w-[1232px] my-0 mx-auto py-0 px-5 flex items-center h-full">
-          <div className="lg:hidden">
+          <div className="lg:hidden" onClick={handleShowSidebar}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
