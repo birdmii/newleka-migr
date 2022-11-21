@@ -20,7 +20,7 @@ const SkltnGrid = ({ category }) => {
   );
   return (
     <div>
-      <div className={category === "all" ? "mt-10" : ""}>
+      <div className={category === "all" ? "lg:mt-10" : ""}>
         {category === "all" ? <SkltnAlert /> : null}
         {gridTitle}
         {gridBody}

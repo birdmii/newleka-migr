@@ -22,7 +22,7 @@ export default async function Home() {
   ]);
 
   return (
-    <div className="mt-10">
+    <div className="lg:mt-10">
       <>
         <Alert alertContent={alertContent} />
         <Cards category={"all"} newsletters={newsletters} />
