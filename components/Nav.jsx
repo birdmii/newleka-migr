@@ -4,7 +4,7 @@ import Logo from "@assets/logo.png";
 import Search from "@components/Search";
 import NavBtn from "@components/NavBtn";
 
-const Nav = ({ query, handleQuery, handleQuerySubmit, handleShowSidebar }) => {
+const Nav = ({ query, handleQuery, handleQuerySubmit, handleShowSidebar, showSearchbar, handleShowSearchbar }) => {
   return (
     <>
       <div className="bg-white h-[64px] sticky top-0 w-full z-10 shadow-shadow-2">
@@ -36,7 +36,7 @@ const Nav = ({ query, handleQuery, handleQuerySubmit, handleShowSidebar }) => {
               />
             </Link>
           </div>
-          <div className="lg:hidden">
+          <div className="lg:hidden" onClick={handleShowSearchbar}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -52,13 +52,13 @@ const Nav = ({ query, handleQuery, handleQuerySubmit, handleShowSidebar }) => {
               />
             </svg>
           </div>
-          <div className="max-lg:hidden flex items-center h-full text-gray-300 border-l border-l-gray-100 border-r border-r-gray-100 w-[60%] pl-5">
-            <Search
-              query={query}
-              handleQuery={handleQuery}
-              handleQuerySubmit={handleQuerySubmit}
-            />
-          </div>
+          <Search
+            query={query}
+            handleQuery={handleQuery}
+            handleQuerySubmit={handleQuerySubmit}
+            showSearchbar={showSearchbar}
+            handleShowSearchbar={handleShowSearchbar}
+          />
           <div className="max-lg:hidden ml-auto">
             <NavBtn content={"제안하기"} />
           </div>

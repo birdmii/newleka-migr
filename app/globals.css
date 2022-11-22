@@ -39,3 +39,15 @@
 a, button {
   cursor: pointer;
 }
+
+form {
+  display: inline-block;
+}
+
+input,
+input:focus,
+textarea,
+select {
+  border: 0;
+  outline: 0;
+}
