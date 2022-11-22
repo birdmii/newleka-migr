@@ -55,11 +55,9 @@ const Modal = ({ showModal, onClose }) => {
           <button onClick={handleCardClick}>
             <div
               id="suggestNewleka"
-              className={
-                isA
-                  ? "bg-primary-100 border-2 border-primary-450 flex justify-center items-center flex-col  w-[30vw] lg:w-[250px] h-[336px] rounded-lg lg:p-5 m-[14px] shadow-shadow-1 hover:shadow-none"
-                  : "flex justify-center items-center flex-col w-[30vw] lg:w-[250px] h-[336px] bg-white rounded-lg lg:p-5 m-[14px] shadow-shadow-1 hover:shadow-none"
-              }
+              className={`${
+                isA ? "bg-primary-100 border-2 border-primary-450" : ""
+              } flex justify-center items-center flex-col w-[30vw] lg:w-[250px] h-[336px] bg-white rounded-lg lg:p-5 m-[14px] shadow-shadow-1 hover:shadow-none`}
             >
               <Image
                 id="suggestNewleka"
@@ -75,11 +73,9 @@ const Modal = ({ showModal, onClose }) => {
           <button onClick={handleCardClick}>
             <div
               id="suggestNewsletter"
-              class={
-                isB
-                  ? "bg-primary-100 border-2 border-primary-450 flex justify-center items-center flex-col w-[30vw] lg:w-[250px] h-[336px] rounded-lg lg:p-5 m-[14px] shadow-shadow-1 hover:shadow-none"
-                  : "flex justify-center items-center flex-col  w-[30vw] lg:w-[250px] h-[336px] bg-white rounded-lg lg:p-5 m-[14px] shadow-shadow-1 hover:shadow-none"
-              }
+              className={`${
+                isB ? "bg-primary-100 border-2 border-primary-450" : ""
+              } flex justify-center items-center flex-col w-[30vw] lg:w-[250px] h-[336px] bg-white rounded-lg lg:p-5 m-[14px] shadow-shadow-1 hover:shadow-none`}
             >
               <Image
                 id="suggestNewsletter"
